@@ -1,0 +1,174 @@
+  /*Imports*/
+  @import url('https://fonts.googleapis.com/css?family=Jura|Share+Tech+Mono|Teko');
+  /*Variables*/
+  $list-font: 'Teko', sans-serif;
+  $primary-font: 'Share Tech Mono', monospace;
+  $secondary-font: 'Jura', sans-serif;
+  /*Animations*/
+  @keyframes flash {
+    50% { opacity: 0.0; }
+  }
+
+  @keyframes flash-text {
+    0% { background-color: #FFF; color: #000; opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { background-color: #FFF; color: #000; opacity: 1.0; }
+  }
+  /*General Elements*/
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #1b1b1b !important;
+    color: #FFF !important;
+    h1,h2,h3 {
+      font-family: $primary-font;
+    }
+    hr {
+      background-color: #FFF;
+      color: #FFF;
+    }
+    navbar {
+      li {
+        font-family: $list-font;
+        font-size: 1.2em !important;
+        margin-bottom: 0.2rem;
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+      }
+    }
+    p, span {
+      color: rgb(200,200,200);
+      font-family: $secondary-font;
+    }
+  }
+  /*Classes*/
+  .about-me {
+    p, span {
+      font-size: 1.3em;
+    }
+  }
+  .centered {
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    top: 5rem;
+  }
+
+  .flash-anim {
+    animation: flash 0.9s infinite;
+  }
+  .flash-anim-text {
+    animation: flash-text 0.9s infinite;
+  }
+
+  .my-email {
+    i {
+      font-size: 1.5em;
+    }
+  }
+
+  .navbar {
+    background-color: #1b1b1b;
+    border-bottom: 2px solid #FFF;
+    cursor: pointer;
+    display: inline-block;
+    list-style-type: none;
+    text-align: center;
+  }
+
+  .skills-page {
+    p {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+  /*IDs*/
+
+  /*Media Queries*/
+
+  /*Smartphones*/
+  @media only screen and (min-width: 320px) and (max-width: 480px)
+  {
+    .img-ep {
+      height: 220%;
+      left: 5%;
+      position: relative;
+      width: 90%;
+    }
+
+    .img-gf {
+      height: 40%;
+      left: 5%;
+      position: relative;
+      width: 90%;
+    }
+
+    .img-tm {
+      height: 20%;
+      left: 5%;
+      width: 90%;
+      position: relative;
+    }
+
+  }
+
+  /*Tablets*/
+  @media only screen and (min-width: 768px) and (max-width: 1023px)
+  {
+    span {
+      left: 15%;
+      position: relative;
+    }
+    .img-ep {
+      height: 220%;
+      left: 15%;
+      position: relative;
+      width: 70%;
+    }
+
+    .img-gf {
+      height: 40%;
+      left: 15%;
+      position: relative;
+      width: 70%;
+    }
+
+    .img-tm {
+      height: 20%;
+      left: 15%;
+      width: 70%;
+      position: relative;
+    }
+
+  }
+
+  /*Laptops/PCs*/
+  @media only screen and (min-width: 1024px)
+  {
+    span {
+      left: 25%;
+      position: relative;
+    }
+    .img-ep {
+      height: 240%;
+      left: 25%;
+      position: relative;
+      width: 50%;
+    }
+
+    .img-gf {
+      height: 60%;
+      left: 25%;
+      position: relative;
+      width: 50%;
+    }
+
+    .img-tm {
+      height: 40%;
+      left: 25%;
+      width: 50%;
+      position: relative;
+    }
+
+  }
