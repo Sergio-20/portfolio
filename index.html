@@ -17,7 +17,7 @@
 
   </head>
 
-  <body>
+  <body >
 
     <header>
       <navbar>
@@ -33,8 +33,8 @@
     <main>
       <div id="about-me" class="about-me centered">
         <h1>About Me</h1>
-        <span>I'm Sergio Gutierrez, a </span>
-        <span class="flash-anim">|</span>
+        <span>I am a </span>
+        <span class="changing-desc flash-anim"></span>
         <br><br>
         <p>I am a Web Developer who loves learning, whether that is anything Web Development related, or not. I always try to stay curious!</p>
       </div>
@@ -49,17 +49,14 @@
         <p class="btn btn-danger col-xs-4">Bootstrap</p>
         <p class="btn btn-danger col-xs-4">Sass</p>
         <p class="btn btn-danger col-xs-4">jQuery</p>
+        <p class="btn btn-danger col-xs-4">React.js</p>
         <h3>Back-End</h3>
         <p class="btn btn-danger col-xs-3">Java</p>
         <p class="btn btn-danger col-xs-3">MySQL</p>
         <p class="btn btn-danger col-xs-3">PHP</p>
         <h3>Other</h3>
         <p class="btn btn-danger col-xs-4">Git</p>
-        <p class="btn btn-danger col-xs-4">NPM</p>
         <p class="btn btn-danger col-xs-4">WordPress</p>
-        <h3>Certs</h3>
-        <p class="btn btn-danger col-xs-6">Network+</p>
-        <p class="btn btn-danger col-xs-6">Security+</p>
         <h3>Operating Systems</h3>
         <p class="btn btn-danger col-xs-6">Windows</p>
         <p class="btn btn-danger col-xs-6">Linux</p>
@@ -119,6 +116,18 @@
         <p class="btn btn-danger col-xs-12 my-email"><i class="far fa-envelope"> sergioiscoding@gmail.com</i></p>
       </div>
     </main>
+
+    <script type="text/javascript" src="typed.js"></script>
+
+    <script>
+    var typed = new Typed('.changing-desc', {
+      strings: ["Web Developer.", "Freelancer.", "Team Player", "Lifelong Learner"],
+      loop: true,
+      smartBackspace: true,
+      shuffle: true,
+      typeSpeed: 40
+    });
+    </script>
 
   </body>
 

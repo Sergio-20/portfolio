@@ -16,6 +16,7 @@
   }
   /*General Elements*/
   html {
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
   body {
@@ -43,11 +44,6 @@
     }
   }
   /*Classes*/
-  .about-me {
-    p, span {
-      font-size: 1.3em;
-    }
-  }
   .centered {
     display: table;
     margin: 0 auto;
