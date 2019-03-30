@@ -4,15 +4,16 @@
   $list-font: 'Teko', sans-serif;
   $primary-font: 'Share Tech Mono', monospace;
   $secondary-font: 'Jura', sans-serif;
+  $primary-font-color: #1b1b1b;
   /*Animations*/
   @keyframes flash {
     50% { opacity: 0.0; }
   }
 
   @keyframes flash-text {
-    0% { background-color: #FFF; color: #000; opacity: 1.0; }
+    0% { background-color: $primary-font-color; color: $primary-font-color; opacity: 1.0; }
     50% { opacity: 0.0; }
-    100% { background-color: #FFF; color: #000; opacity: 1.0; }
+    100% { background-color: $primary-font-color; color: $primary-font-color; opacity: 1.0; }
   }
   /*General Elements*/
   html {
@@ -20,14 +21,13 @@
     scroll-behavior: smooth;
   }
   body {
-    background-color: #1b1b1b !important;
-    color: #FFF !important;
+    color: $primary-font-color !important;
     h1,h2,h3 {
       font-family: $primary-font;
     }
     hr {
-      background-color: #FFF;
-      color: #FFF;
+      background-color: $primary-font-color;
+      color: $primary-font-color;
     }
     navbar {
       li {
@@ -39,7 +39,7 @@
       }
     }
     p, span {
-      color: rgb(200,200,200);
+      color: $primary-font-color;
       font-family: $secondary-font;
     }
   }
@@ -65,7 +65,7 @@
   }
 
   .navbar {
-    background-color: #1b1b1b;
+    background-color: $primary-font-color;
     border-bottom: 2px solid #FFF;
     cursor: pointer;
     display: inline-block;

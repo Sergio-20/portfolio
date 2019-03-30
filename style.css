@@ -9,34 +9,34 @@
 }
 @keyframes flash-text {
   0% {
-    background-color: #FFF;
-    color: #000;
+    background-color: #1b1b1b;
+    color: #1b1b1b;
     opacity: 1;
   }
   50% {
     opacity: 0;
   }
   100% {
-    background-color: #FFF;
-    color: #000;
+    background-color: #1b1b1b;
+    color: #1b1b1b;
     opacity: 1;
   }
 }
 /*General Elements*/
 html {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
-  background-color: #1b1b1b !important;
-  color: #FFF !important;
+  color: #1b1b1b !important;
 }
 body h1, body h2, body h3 {
   font-family: "Share Tech Mono", monospace;
 }
 body hr {
-  background-color: #FFF;
-  color: #FFF;
+  background-color: #1b1b1b;
+  color: #1b1b1b;
 }
 body navbar li {
   font-family: "Teko", sans-serif;
@@ -46,15 +46,11 @@ body navbar li {
   padding-right: 0.25rem;
 }
 body p, body span {
-  color: #c8c8c8;
+  color: #1b1b1b;
   font-family: "Jura", sans-serif;
 }
 
 /*Classes*/
-.about-me p, .about-me span {
-  font-size: 1.3em;
-}
-
 .centered {
   display: table;
   margin: 0 auto;
