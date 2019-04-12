@@ -1,27 +1,6 @@
 /*Imports*/
 @import url("https://fonts.googleapis.com/css?family=Jura|Share+Tech+Mono|Teko");
 /*Variables*/
-/*Animations*/
-@keyframes flash {
-  50% {
-    opacity: 0;
-  }
-}
-@keyframes flash-text {
-  0% {
-    background-color: #1b1b1b;
-    color: #1b1b1b;
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    background-color: #1b1b1b;
-    color: #1b1b1b;
-    opacity: 1;
-  }
-}
 /*General Elements*/
 html {
   overflow-x: hidden;
@@ -38,14 +17,7 @@ body hr {
   background-color: #1b1b1b;
   color: #1b1b1b;
 }
-body navbar li {
-  font-family: "Teko", sans-serif;
-  font-size: 1.2em !important;
-  margin-bottom: 0.2rem;
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-body p, body span {
+body h3 {
   color: #1b1b1b;
   font-family: "Jura", sans-serif;
 }
@@ -58,12 +30,20 @@ body p, body span {
   top: 5rem;
 }
 
-.flash-anim {
-  animation: flash 0.9s infinite;
+.centered-about {
+  display: table;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  top: 5rem;
 }
 
-.flash-anim-text {
-  animation: flash-text 0.9s infinite;
+.centered-text {
+  text-align: center;
+}
+
+d-inline-block {
+  display: inline-block;
 }
 
 .my-email i {

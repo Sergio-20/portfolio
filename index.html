@@ -19,104 +19,122 @@
 
   </head>
 
-  <body >
+  <body>
 
     <header>
-      <navbar>
-        <ul class="container-fluid navbar">
-          <li class="col-sm-2 btn btn-danger"><a class="text-light" href="#about-me">About Me</a></li>
-          <li class="col-sm-2 btn btn-danger"><a class="text-light" href="#skills">Skills</a></li>
-          <li class="col-sm-2 btn btn-danger"><a class="text-light" href="#portfolio">Portfolio</a></li>
-          <li class="col-sm-2 btn btn-danger"><a class="text-light" href="#contact">Contact</a></li>
-        </ul>
-      </navbar>
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark navbar fixed-top">
+        <a class="navbar-brand" href="#about-me">Sergio Gutierrez |</a>
+        <button class="btn bg-primary navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <i class="text-light fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Latest Work</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main>
-      <div id="about-me" class="about-me centered">
+      <div id="about-me"></div>
+      <div class="about-me centered-about">
         <h1>About Me</h1>
-        <span>I am a </span>
-        <span class="changing-desc flash-anim"></span>
+        <hr/>
+        <h3 class="d-inline-block">I am a => </h3>
+        <h3 class="d-inline-block changing-desc "></h3>
         <br><br>
-        <p>I am a Web Developer who loves learning, whether that is anything Web Development related, or not. I always try to stay curious!</p>
+        <p>I am a Front-End Web Developer who loves learning, whether that is anything Web Development related, or not. I always try to stay curious!</p>
+        <hr/>
       </div>
-      <br>
-      <div id="skills" class="centered skills-page">
+      <br/>
+      <div id="skills"></div>
+      <div class="centered skills-page">
         <h1>Skills</h1>
         <h3>Front-End</h3>
-        <p class="btn btn-danger col-xs-3">HTML5</p>
-        <p class="btn btn-danger col-xs-3">CSS3</p>
-        <p class="btn btn-danger col-xs-3">Javascript</p>
+        <button class="btn btn-primary col-xs-3">HTML5</button>
+        <button class="btn btn-primary col-xs-3">CSS3</button>
+        <button class="btn btn-primary col-xs-3">Javascript</button>
         <h3>Front-End Frameworks/Libraries</h3>
-        <p class="btn btn-danger col-xs-4">Bootstrap</p>
-        <p class="btn btn-danger col-xs-4">Sass</p>
-        <p class="btn btn-danger col-xs-4">jQuery</p>
-        <!--<p class="btn btn-danger col-xs-4">React.js</p>-->
+        <button class="btn btn-primary col-xs-4">Bootstrap</button>
+        <button class="btn btn-primary col-xs-4">Sass</button>
+        <button class="btn btn-primary col-xs-4">jQuery</button>
         <h3>Back-End</h3>
-        <p class="btn btn-danger col-xs-3">Java</p>
-      <!--  <p class="btn btn-danger col-xs-3">MySQL</p>
-        <p class="btn btn-danger col-xs-3">PHP</p>-->
+        <button class="btn btn-primary col-xs-3">Java</button>
         <h3>Other</h3>
-        <p class="btn btn-danger col-xs-4">Git</p>
-        <p class="btn btn-danger col-xs-4">Markdown</p>
-        <p class="btn btn-danger col-xs-4">WordPress</p>
+        <button class="btn btn-primary col-xs-4">Git</button>
+        <button class="btn btn-primary col-xs-4">Markdown</button>
+        <button class="btn btn-primary col-xs-4">WordPress</button>
         <h3>Operating Systems</h3>
-        <p class="btn btn-danger col-xs-6">Windows</p>
-        <p class="btn btn-danger col-xs-6">Linux</p>
+        <button class="btn btn-primary col-xs-6">Windows</button>
+        <button class="btn btn-primary col-xs-6">Linux</button>
       </div>
-      <br>
-      <div id="portfolio" class="centered">
-        <h1>My Latest Work</h1>
+      <br/>
+      <div id="portfolio"></div>
+      <div class="centered">
+        <h1 class="centered-text">My Latest Work</h1>
         <hr>
-        <h3>E-Commerce Website</h3>
-        <img class="img-ep" src="website-images/effortless-apparel.png" alt="Effortless Apparel E-Commerce Website that I built."/>
-        <br><br>
+        <h3 class="centered-text">Social Artwork Website</h3>
+        <hr/>
+        <img class="img-ep" src="https://user-images.githubusercontent.com/29030325/55689935-dbfb4500-593f-11e9-9c13-fc630a8e02bb.png" alt="A website where users share their artwork with the world."/>
+        <br/><br/>
         <span>
-          <p class="btn btn-danger col-xs-3">HTML5</p>
-          <p class="btn btn-danger col-xs-3">CSS3</p>
-          <p class="btn btn-danger col-xs-3">Javascript</p>
-          <p class="btn btn-danger col-xs-3">Bootstrap</p>
-          <p class="btn btn-danger col-xs-3">Sass</p>
-          <p class="btn btn-danger col-xs-3">jQuery</p>
-          <p class="btn btn-danger col-xs-3">PHP</p>
-          <p class="btn btn-danger col-xs-3">MySQL</p>
-          <br>
-          <a href="https://github.com/Sergio-20/E-Commerce-Sample" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
-          <!--<a href="#" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fas fa-sitemap"> View Online</i></p></a>-->
+          <button class="btn btn-primary col-xs-3">HTML5</button>
+          <button class="btn btn-primary col-xs-3">CSS3</button>
+          <button class="btn btn-primary col-xs-3">Javascript</button>
+          <button class="btn btn-primary col-xs-3">Bootstrap</button>
+          <!--<button class="btn btn-primary col-xs-3">Sass</button>-->
+          <!--<button class="btn btn-primary col-xs-3">jQuery</button>-->
+          <button class="btn btn-primary col-xs-3">React.js</button>
+          <br/><br/>
+          <a href="https://github.com/Sergio-20/E-Commerce-Sample" target="_blank"><p class="btn btn-primary col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
         </span>
         <hr>
-        <h3>Gym Membership Website</h3>
-        <img class="img-gf" src="website-images/globe-fitness.png" alt="Gym Membership Website that I built."/>
-        <br><br>
+        <h3 class="centered-text">Gym Membership Website</h3>
+        <hr/>
+        <img class="img-gf" src="website-images/globe-fitness.png" alt="A gym membership website."/>
+        <br/><br/>
         <span>
-          <p class="btn btn-danger col-xs-3">HTML5</p>
-          <p class="btn btn-danger col-xs-3">CSS3</p>
-          <p class="btn btn-danger col-xs-3">Bootstrap</p>
-          <p class="btn btn-danger col-xs-3">jQuery</p>
-          <br>
-          <a href="https://github.com/Sergio-20/Globe-Fitness" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
-          <a href="https://sergio-20.github.io/Globe-Fitness/HTML/Homepage.html" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fas fa-sitemap"> View Online</i></p></a>
+          <button class="btn btn-primary col-xs-3">HTML5</button>
+          <button class="btn btn-primary col-xs-3">CSS3</button>
+          <button class="btn btn-primary col-xs-3">Bootstrap</button>
+          <button class="btn btn-primary col-xs-3">jQuery</button>
+          <br/><br/>
+          <a href="https://github.com/Sergio-20/Globe-Fitness" target="_blank"><p class="btn btn-primary col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
+          <a href="https://sergio-20.github.io/Globe-Fitness/HTML/Homepage.html" target="_blank"><p class="btn btn-primary col-xs-3"><i class="fas fa-sitemap"> View Online</i></p></a>
         </span>
         <hr>
-        <h3>Restaurant Website</h3>
-        <img class="img-tm" src="website-images/toro-mexican.png" alt="Mexican Restaurant Website that I built."/>
-        <br><br>
+        <h3 class="centered-text">Restaurant Website</h3>
+        <hr/>
+        <img class="img-tm" src="website-images/toro-mexican.png" alt="A Mexican Restaurant website."/>
+        <br/><br/>
         <span>
-          <p class="btn btn-danger col-xs-3">HTML5</p>
-          <p class="btn btn-danger col-xs-3">CSS3</p>
-          <p class="btn btn-danger col-xs-3">Javascript</p>
-          <p class="btn btn-danger col-xs-3">Bootstrap</p>
-          <p class="btn btn-danger col-xs-3">jQuery</p>
-          <br>
-          <a href="https://github.com/Sergio-20/Toro-Mexican-Restaurant" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
-          <a href="https://sergio-20.github.io/Toro-Mexican-Restaurant/HTML/index.html" target="_blank"><p class="btn btn-danger col-xs-3"><i class="fas fa-sitemap"> View Online</i></p></a>
+          <button class="btn btn-primary col-xs-3">HTML5</button>
+          <button class="btn btn-primary col-xs-3">CSS3</button>
+          <button class="btn btn-primary col-xs-3">Javascript</button>
+          <button class="btn btn-primary col-xs-3">Bootstrap</button>
+          <button class="btn btn-primary col-xs-3">jQuery</button>
+          <br/><br/>
+          <a href="https://github.com/Sergio-20/Toro-Mexican-Restaurant" target="_blank"><p class="btn btn-primary col-xs-3"><i class="fab fa-github"> View Code</i></p></a>
+          <a href="https://sergio-20.github.io/Toro-Mexican-Restaurant/HTML/index.html" target="_blank"><p class="btn btn-primary col-xs-3"><i class="fas fa-sitemap"> View Online</i></p></a>
         </span>
         <hr>
       </div>
-      <br>
-      <div id="contact" class="centered">
+      <br/>
+      <div id="contact"></div>
+      <div class="centered">
         <h1>Get In Touch</h1>
-        <p class="btn btn-danger col-xs-12 my-email"><i class="far fa-envelope"> sergioiscoding@gmail.com</i></p>
+        <button class="btn btn-primary col-xs-12 my-email"><i class="far fa-envelope"> sergioiscoding@gmail.com</i></button>
       </div>
     </main>
 
@@ -124,7 +142,7 @@
 
     <script>
     var typed = new Typed('.changing-desc', {
-      strings: ["Web Developer.", "Freelancer.", "Team Player", "Lifelong Learner"],
+      strings: ["Web Developer.", "Freelancer.", "Team Player", "Lifelong Learner", "Curious Person", "Open Minded Individual", "Trilingual"],
       loop: true,
       smartBackspace: true,
       shuffle: true,
