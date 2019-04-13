@@ -11,19 +11,40 @@
     scroll-behavior: smooth;
   }
   body {
+
     color: $primary-font-color !important;
+
+    button {
+      font-weight: bold !important;
+    }
+
+    footer {
+      background-color: #444;
+      i {
+        color: #fff;
+        font-size: 3em;
+        margin: 1em;
+        &:hover {
+          color: #007bff;
+        }
+      }
+    }
+
     h1,h2,h3 {
       font-family: $primary-font;
       font-weight: bolder;
     }
+
     hr {
       background-color: $primary-font-color;
       color: $primary-font-color;
     }
+
     h3 {
       color: $primary-font-color;
       font-family: $secondary-font;
     }
+
   }
   /*Classes*/
   .centered {
@@ -75,6 +96,13 @@
     display: inline-block;
     list-style-type: none;
     text-align: center;
+  }
+
+  .nav-link {
+    &:hover {
+      color: #fff !important;
+      opacity: 1.0 !important;
+    }
   }
 
   .skills-page {

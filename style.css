@@ -10,6 +10,20 @@ html {
 body {
   color: #1b1b1b !important;
 }
+body button {
+  font-weight: bold !important;
+}
+body footer {
+  background-color: #444;
+}
+body footer i {
+  color: #fff;
+  font-size: 3em;
+  margin: 1em;
+}
+body footer i:hover {
+  color: #007bff;
+}
 body h1, body h2, body h3 {
   font-family: "Share Tech Mono", monospace;
   font-weight: bolder;
@@ -71,6 +85,11 @@ body h3 {
   display: inline-block;
   list-style-type: none;
   text-align: center;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  opacity: 1 !important;
 }
 
 .skills-page p {
