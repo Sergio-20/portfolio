@@ -12,6 +12,7 @@ body {
 }
 body h1, body h2, body h3 {
   font-family: "Share Tech Mono", monospace;
+  font-weight: bolder;
 }
 body hr {
   background-color: #1b1b1b;
@@ -42,8 +43,21 @@ body h3 {
   text-align: center;
 }
 
-d-inline-block {
+.d-inline-block {
   display: inline-block;
+}
+
+.hr-about {
+  background-color: #444;
+  color: #444;
+  height: 0.25em;
+}
+
+.hr-main {
+  background-color: #444;
+  color: #444;
+  height: 0.25em;
+  width: 50%;
 }
 
 .my-email i {
@@ -68,7 +82,7 @@ d-inline-block {
 /*Media Queries*/
 /*Smartphones*/
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  .img-ep {
+  .img-am {
     height: 220%;
     left: 5%;
     position: relative;
@@ -96,7 +110,7 @@ d-inline-block {
     position: relative;
   }
 
-  .img-ep {
+  .img-am {
     height: 220%;
     left: 15%;
     position: relative;
@@ -124,7 +138,7 @@ d-inline-block {
     position: relative;
   }
 
-  .img-ep {
+  .img-am {
     height: 240%;
     left: 25%;
     position: relative;

@@ -14,6 +14,7 @@
     color: $primary-font-color !important;
     h1,h2,h3 {
       font-family: $primary-font;
+      font-weight: bolder;
     }
     hr {
       background-color: $primary-font-color;
@@ -44,8 +45,21 @@
     text-align: center;
   }
 
-  d-inline-block {
+  .d-inline-block {
     display: inline-block;
+  }
+
+  .hr-about {
+    background-color: #444;
+    color: #444;
+    height: 0.25em;
+  }
+
+  .hr-main {
+    background-color: #444;
+    color: #444;
+    height: 0.25em;
+    width: 50%;
   }
 
   .my-email {
@@ -76,7 +90,7 @@
   /*Smartphones*/
   @media only screen and (min-width: 320px) and (max-width: 480px)
   {
-    .img-ep {
+    .img-am {
       height: 220%;
       left: 5%;
       position: relative;
@@ -106,7 +120,7 @@
       left: 15%;
       position: relative;
     }
-    .img-ep {
+    .img-am {
       height: 220%;
       left: 15%;
       position: relative;
@@ -136,7 +150,7 @@
       left: 25%;
       position: relative;
     }
-    .img-ep {
+    .img-am {
       height: 240%;
       left: 25%;
       position: relative;
