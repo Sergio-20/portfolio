@@ -1,10 +1,12 @@
   /*Imports*/
   @import url('https://fonts.googleapis.com/css?family=Jura|Share+Tech+Mono|Teko');
+
   /*Variables*/
   $list-font: 'Teko', sans-serif;
   $primary-font: 'Share Tech Mono', monospace;
   $secondary-font: 'Jura', sans-serif;
   $primary-font-color: #1b1b1b;
+
   /*General Elements*/
   html {
     overflow-x: hidden;
@@ -117,92 +119,24 @@
       margin-right: 0.5rem;
     }
   }
-  /*IDs*/
 
   /*Media Queries*/
 
-  /*Smartphones*/
-  @media only screen and (min-width: 320px) and (max-width: 480px)
-  {
-    .img-am {
-      height: 220%;
-      left: 5%;
-      position: relative;
-      width: 90%;
-    }
-
-    .img-gf {
-      height: 40%;
-      left: 5%;
-      position: relative;
-      width: 90%;
-    }
-
-    .img-tm {
-      height: 20%;
-      left: 5%;
-      width: 90%;
-      position: relative;
-    }
-
-  }
-
   /*Tablets*/
-  @media only screen and (min-width: 768px) and (max-width: 1023px)
-  {
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /*centers buttons*/
     span {
       left: 15%;
       position: relative;
     }
-    .img-am {
-      height: 220%;
-      left: 15%;
-      position: relative;
-      width: 70%;
-    }
-
-    .img-gf {
-      height: 40%;
-      left: 15%;
-      position: relative;
-      width: 70%;
-    }
-
-    .img-tm {
-      height: 20%;
-      left: 15%;
-      width: 70%;
-      position: relative;
-    }
-
   }
-
   /*Laptops/PCs*/
-  @media only screen and (min-width: 1024px)
-  {
+  @media only screen and (min-width: 1024px) {
+
+    /*centers buttons*/
     span {
       left: 25%;
       position: relative;
     }
-    .img-am {
-      height: 240%;
-      left: 25%;
-      position: relative;
-      width: 50%;
-    }
-
-    .img-gf {
-      height: 60%;
-      left: 25%;
-      position: relative;
-      width: 50%;
-    }
-
-    .img-tm {
-      height: 40%;
-      left: 25%;
-      width: 50%;
-      position: relative;
-    }
-
   }
