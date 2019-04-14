@@ -16,10 +16,16 @@
 
     button {
       font-weight: bold !important;
+      &:hover {
+        cursor: default;
+      }
     }
 
     footer {
       background-color: #444;
+      h1 {
+        color: #fff;
+      }
       i {
         color: #fff;
         font-size: 3em;

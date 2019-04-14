@@ -13,8 +13,14 @@ body {
 body button {
   font-weight: bold !important;
 }
+body button:hover {
+  cursor: default;
+}
 body footer {
   background-color: #444;
+}
+body footer h1 {
+  color: #fff;
 }
 body footer i {
   color: #fff;
