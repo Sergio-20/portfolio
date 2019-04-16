@@ -104,10 +104,8 @@ body h3 {
 }
 
 /*Media Queries*/
-
 /*Tablets*/
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-
   /*centers buttons*/
   span {
     left: 15%;
@@ -116,7 +114,6 @@ body h3 {
 }
 /*Laptops/PCs*/
 @media only screen and (min-width: 1024px) {
-
   /*centers buttons*/
   span {
     left: 25%;
