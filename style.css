@@ -42,6 +42,15 @@ body h3 {
   color: #1b1b1b;
   font-family: "Jura", sans-serif;
 }
+body main div {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+body .tech-used {
+  margin-bottom: 4rem;
+  margin-top: 8rem;
+  text-align: center;
+}
 
 /*Classes*/
 .centered {
@@ -51,16 +60,17 @@ body h3 {
   top: 5rem;
 }
 
+.centered button {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .centered-about {
   display: table;
   margin: 0 auto;
   position: relative;
   text-align: center;
   top: 5rem;
-}
-
-.centered-text {
-  text-align: center;
 }
 
 .d-inline-block {

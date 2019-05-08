@@ -53,6 +53,17 @@
       font-family: $secondary-font;
     }
 
+    main div {
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .tech-used {
+      margin-bottom: 4rem;
+      margin-top: 8rem;
+      text-align: center;
+    }
+
   }
   /*Classes*/
   .centered {
@@ -62,16 +73,17 @@
     top: 5rem;
   }
 
+  .centered button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .centered-about {
     display: table;
     margin: 0 auto;
     position: relative;
     text-align: center;
     top: 5rem;
-  }
-
-  .centered-text {
-    text-align: center;
   }
 
   .d-inline-block {
@@ -127,7 +139,7 @@
 
     /*centers buttons*/
     span {
-      left: 15%; 
+      left: 15%;
       position: relative;
     }
   }
