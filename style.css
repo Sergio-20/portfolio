@@ -106,7 +106,7 @@ main#home h1 {
   color: #70aed2;
   font-size: 3rem;
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .about-me li a:hover {
