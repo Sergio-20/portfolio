@@ -6,6 +6,8 @@
   line-height: 1.2;  
 }
 
+/* HTML Elements */
+
 html, body {
   scroll-behavior: smooth !important;
 }
@@ -45,6 +47,27 @@ p {
   font-size: 1.2rem;  
   margin: 0.5rem;
 }
+
+/* IDs */
+
+#portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 0px;
+}
+
+#portfolio figure {
+  margin: 0;
+  padding: 0;
+}
+
+#portfolio section {
+  padding-bottom: 0;
+}
+
+/* Classes */
 
 .bg-white { background: #fff; }
 
@@ -115,23 +138,15 @@ p {
   text-decoration: none;  
 }
 
-.header__item::after {
+.heading--underline {
   background: #a27035;
-  content: "";
-  height: 4px;
-  width: 0%;
-  position: absolute;
-  bottom: 0%;
-  left: 50%;
-  border-radius: 10px;
-  transition: all 500ms ease-in-out;
+  background-color: #a27035;
+  border-color: #a27035;
+  margin: 0 auto;
+  width: 100px;
 }
 
-.header__item:hover::after {
-  left: 0%;
-  margin-bottom: 0.5rem;
-  width: 100%;
-}
+.hide { display: none !important; }
 
 .large-font {
   font-size: 1.6rem;
@@ -182,6 +197,35 @@ p {
   max-height: 600px;  
 }
 
+.show { display: inherit !important; }
+
+.text-center { text-align: center; }
+
+/* Desktops & Large Tablets */
+
+@media only screen and ( min-width: 761px )
+{
+  .header__item::after {
+    background: #a27035;
+    content: "";
+    height: 4px;
+    width: 0%;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    border-radius: 10px;
+    transition: all 500ms ease-in-out;
+  }
+  
+  .header__item:hover::after {
+    left: 0%;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+
+/* Tablets and Smartphones */
+
 @media only screen and ( max-width: 760px )
 {
 
@@ -204,6 +248,29 @@ p {
   #contact .section__large {
     padding: unset;
   }
+
+  #portfolio {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  .header { 
+    position: unset;
+  }
+
+  .header__item {
+    margin: 0;
+    opacity: 0.7;
+    transition: all 0.4s ease-in-out;
+    width: 100%;
+  }
+
+  .header__item:hover, .header__item:active { 
+    background: #a27035;
+    opacity: 1; 
+  }
+
+  .header__item:hover a { color: #fff; }
 
   .section-container {
     flex-wrap: wrap;
