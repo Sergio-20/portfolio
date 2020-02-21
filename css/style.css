@@ -189,7 +189,7 @@ p {
     padding: 2rem 0;
   }
 
-  #about-me, #my-projects, #contact {
+  #about-me, #contact, #portfolio {
     justify-content: normal;
     padding: 2rem;
     text-align: center;

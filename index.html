@@ -7,17 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./reading-progress/progress-bar.css" />
   <title>Sergio Gutierrez | Web Developer from Fresno, CA</title>
 </head>
 
 <body>
+
+<div class="progress-bar" style="background: #a27035;"><p> </p></div>
 
 <header class="header">
   <nav>
 	<ul>
 	<li class="header__item"><a href="#">Home</a></li>
 	<li class="header__item"><a href="#about-me">About Me</a></li>	
-	<li class="header__item"><a href="#my-projects">My Projects</a></li>
+	<li class="header__item"><a href="#portfolio">Portfolio</a></li>
 	<li class="header__item"><a href="#contact">Contact</a></li>		
 	</ul>  
   </nav>	
@@ -35,7 +38,7 @@
 	</section>	  
   </div>
 
-  <div id="my-projects" class="bg-white section-container section-container--column">
+  <div id="portfolio" class="bg-white section-container section-container--column">
 	<section class="section section-container--size-limiter">
 	  <h2>Featured projects</h2>	
 	  <h3>Marketing Genome</h3>
@@ -86,11 +89,15 @@
 	  </p>
 	  <p class="bold">I want to help you transform your idea from a concept to a success.</p>
 	  <a class="btn btn__primary btn--half" href="https://github.com/sergio-20" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i> Check Out My Github</a>
+	  <a class="btn btn__primary btn--half" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i> Contact Me Today</a>
 	</section>
 	<section class="section__small">
 	  <img class="section__image selfie" src="./img/selfie.png" alt="" />	
 	</section>	  
   </div>
+
+  <script defer src="./reading-progress/position-tracker.min.js" type="module"></script>  
+  <script defer src="./js/barColor.js" type="module"></script>
   
 </main>
 
