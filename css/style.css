@@ -10,6 +10,17 @@
 
 html, body {
   scroll-behavior: smooth !important;
+  scrollbar-color: #a27035 #f3f1ec;
+}
+
+body::-webkit-scrollbar {
+  background: #f3f1ec;
+  background-color: #f3f1ec;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #a27035;
+  background-color: #a27035;
 }
 
 body, h1, h2, h3, p, ul {
@@ -48,9 +59,24 @@ p {
   margin: 0.5rem;
 }
 
+section {
+  opacity: 0;
+  transform: translate(0, 20px); 
+  transition: all 1s;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
 /* IDs */
 
-#portfolio {
+#about-me, #about-me * {
+  opacity: 1 !important;
+}
+
+#websites, #apps {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
@@ -58,12 +84,12 @@ p {
   grid-gap: 0px;
 }
 
-#portfolio figure {
+#websites figure, #apps figure {
   margin: 0;
   padding: 0;
 }
 
-#portfolio section {
+#websites section, #apps section {
   padding-bottom: 0;
 }
 
@@ -74,7 +100,7 @@ p {
 .bold { font-weight: bold; }
 
 .btn {
-  border-radius: 1rem;
+  border-radius: 0rem;
   cursor: pointer;
   display: inline-block;
   padding: 1rem 1.5rem;
@@ -90,8 +116,8 @@ p {
 .btn--half { width: 50%; text-align: center; }
 
 .btn:hover { 
-  background: #222222;
-  box-shadow:  0px 0px 0.8rem #1d1d1d, 0px 0px 0.8rem #272727;
+  background: #a27035;
+  box-shadow:  0px 0px 0.8rem #fff;
   color: #fff;  
 }
 
@@ -103,7 +129,7 @@ p {
 }
 
 .footer {
-  background: #222;
+  background: #a27035;
   color: #fff;
   display: flex;
   font-size: 1rem;
@@ -119,6 +145,7 @@ p {
    justify-content: flex-start; 
    position: sticky;
    top: 0;
+   z-index: 1;
 }
 
 .header__item {
@@ -180,6 +207,18 @@ p {
   width: 100%
 }
 
+.section__image-zoom-container {
+  overflow: hidden !important;
+}
+
+.section__image--zoom {
+  transition: all 1s ease-in-out;
+}
+
+.section__image--zoom:hover {
+  transform: scale( 1.2 );
+}
+
 .section__large {
   display: inline-flex;
   flex: 1 0 65%;
@@ -222,6 +261,11 @@ p {
     margin-bottom: 0.5rem;
     width: 100%;
   }
+
+  .padding-b { padding-bottom: 8rem !important; }
+
+  .padding-tb { padding-bottom: 5rem; padding-top: 10rem !important; }
+
 }
 
 /* Tablets and Smartphones */
@@ -233,7 +277,7 @@ p {
     padding: 2rem 0;
   }
 
-  #about-me, #contact, #portfolio {
+  #about-me, #contact, #websites, #apps {
     justify-content: normal;
     padding: 2rem;
     text-align: center;
@@ -249,7 +293,7 @@ p {
     padding: unset;
   }
 
-  #portfolio {
+  #websites, #apps {
     grid-template-columns: 1fr;
     grid-gap: 1rem;
   }
