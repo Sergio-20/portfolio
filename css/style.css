@@ -76,6 +76,10 @@ section.visible {
   opacity: 1 !important;
 }
 
+#contact p {
+  filter: drop-shadow( 0 0 10px #a27035 );
+}
+
 #websites, #apps {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -143,9 +147,14 @@ section.visible {
    display: flex;
    align-items: center;
    justify-content: flex-start; 
+   height: 7.5rem;
    position: sticky;
    top: 0;
    z-index: 1;
+}
+
+.header ul li {
+  vertical-align: middle;
 }
 
 .header__item {
