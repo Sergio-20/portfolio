@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Sergio Gutierrez | Blog</title>
+  </head>
+
+  <body class="example">
+    <header class="header">
+      <nav>
+        <ul>
+          <i class="header__item fa fa-bars open-nav" aria-hidden="true"></i>
+          <i class="header__item fa fa-times close-nav" aria-hidden="true"></i>
+          <li class="header__item">
+            <a href="/"
+              ><img
+                src="../../img/valley-web-logo.png"
+                height="80"
+                alt="Valley Web LLC. Logo"
+            /></a>
+          </li>
+          <li class="header__item"><a href="/">Home</a></li>
+          <li class="header__item"><a href="/#about-me">About Me</a></li>
+          <li class="header__item"><a href="/#websites">Portfolio</a></li>
+          <li class="header__item"><a href="/blog/blog.html">Blog</a></li>
+          <li class="header__item"><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="blog-post text-center">
+        <h1>Big O Notation Explained</h1>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://i.stack.imgur.com/WcBRI.png"
+            alt="Big O Notation"
+          />
+          <figcaption>Some common Big O Notation time complexities</figcaption>
+        </figure>
+        <p>
+          Ah, Big O Notation. This is something that boggles the mind of most
+          web developers and for a good reason — it's complicated stuff.
+        </p>
+        <p>
+          But, for that very reason I have written this blog post in the hopes
+          that it can give other developers started with the basics of Big O
+          Notation, because beyond these it can quickly get mathematical, and
+          complicated.
+        </p>
+        <p>
+          The good news however, is that most web developers do not need to
+          worry about going too deep into the details about Big O Notation. The
+          minute details are mostly for academics, researchers, or for
+          developers dealing with vast amounts of data. If you fall into this
+          camp, then you may want to check out
+          <a href="https://discrete.gr/complexity/?en" target="_blank"
+            >this detailed article on Algorithm Complexity Analysis</a
+          >.
+        </p>
+
+        <h2>So, What is Big O Notation Anyway?</h2>
+        <p>
+          All Big O Notation is, is a way for us to compare the way our programs
+          are written in regards to how long they take to complete their
+          task/execute.
+        </p>
+        <p>
+          So, say you wrote a method that takes in an array of names and outputs
+          it to the console. How long does it take to complete? Will it always
+          take the same amount of time to execute?
+        </p>
+        <p>
+          These are the questions Big O Notation answers for us. But, with one
+          small caveat, namely that we will always be looking at the worst
+          possible situation when dealing with our data. In technical terms this
+          is referred to as the, "worst-case scenario".
+        </p>
+        <p>
+          This is done so that we will not be surprised and left in awe if our
+          program is taking too long to do what it was designed to do. We can
+          use Big O Notation to figure out why our program was taking too long
+          by dissecting our code, and finding which implementation was the cause
+          for its slow execution time.
+        </p>
+        <p>
+          Therefore, all that's left for us to do now that we understand the why
+          and the what of Big O Notation, is for us to dive into the basic
+          details. By doing so, we will be able to read our code, and identify
+          how we can fix it so that it can be fast, or at the very least, have
+          the best speed performance possible.
+        </p>
+
+        <h3>O(1) Constant Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://arturmeyster.com/content/images/2015/02/constant-time-1.png"
+            alt=""
+          />
+          <figcaption>An illustration of constant time.</figcaption>
+        </figure>
+        <p>
+          When measuring Big O Notation, we use the syntax O(n).
+        </p>
+        <p>
+          What is within the parenthesis will be what describes in a
+          mathematical way, the time complexity, that is to say, the time it
+          takes for our code to execute.
+        </p>
+        <p>
+          When talking about Constant Time, we use the notation O(1). Where (1)
+          is representing the idea that our code will always take the same
+          amount of time to execute, regardless of how much data our code has to
+          go through.
+        </p>
+        <p>
+          Therefore, time is constant. Just like how our (1) in the parenthesis
+          will always be a (1). Nothing is causing the 1 within the parenthesis
+          to change into something else.
+        </p>
+
+        <h3>O(n) Linear Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://mathpullzone-8231.kxcdn.com/wp-content/uploads/graph-of-linear-equation-example-2.png"
+            alt=""
+          />
+          <figcaption>An illustration of linear time.</figcaption>
+        </figure>
+        <p>
+          Linear time is described by the syntax: O(n). (n) represents the idea
+          that our function will be very fast or very slow depending on how much
+          data we have.
+        </p>
+        <p>
+          So unlike constant time O(1), where the data size never affects the
+          time it takes to execute, in linear time it does.
+        </p>
+        <p>
+          Added a string to your array? Do you need to loop through that array?
+          Well then, you've just made the process take a bit longer to do than
+          before.
+        </p>
+        <p>
+          Likewise, remove an item from your array? Need to iterate/repeat over
+          it? It will take a little less time to go through that data structure.
+        </p>
+        <p>
+          In summary, the time it takes to execute your code will increase or
+          decrease like a line. That's way it is called linear time.
+        </p>
+
+        <h3>O(log n) Logarithmic Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://i0.wp.com/www.jenniferbland.com/wp-content/uploads/Olog-n-logarithmic-complexity.jpg?resize=472%2C328"
+            alt=""
+          />
+          <figcaption>An illustration of logarithmic time.</figcaption>
+        </figure>
+        <p>
+          Logarithmic time is described by the expression: O(log n). This simply
+          means that the time it takes for our code to execute all the data we
+          have is done in a logarithmic way.
+        </p>
+        <p>
+          Our code executing in a logarithmic way means that it is using the
+          divide-and-conquer strategy to go through our data set (arrays,
+          objects, lists, etc...).
+        </p>
+        <p>
+          Take for instance, that time you were in school and you split into
+          groups to complete an assignment. In order to complete your group
+          project each of you researched the same topic.
+        </p>
+        <p>
+          But, since this one person researched this one thing about the topic
+          you are researching, and that person researched that one thing about
+          the same topic you are researching, hey! You don't need to look at
+          that stuff!
+        </p>
+        <p>They already did it for you!</p>
+        <p>
+          All you have to decide is whether those pieces of information are what
+          <em>you</em> are looking for.
+        </p>
+
+        <p>Here's another example.</p>
+
+        <p>
+          You have a phonebook in your hands. You are looking for the word
+          <em>tuna</em>.
+        </p>
+
+        <p>
+          So you open up the phonebook to more or less the middle of itself. You
+          see you are at the section where all the words beginning with the
+          letter <em>m</em> present themselves.
+        </p>
+
+        <p>
+          From there, you turn a wad of pages some more, and you arrive at all
+          the words that start with the letter <em>Q</em>.
+        </p>
+
+        <p>
+          So, you turn the wad of pages again, and this time you arrive at the
+          section where all the words beginning with the letter <em>t</em> are.
+          Not only that, but you are towards the end of the section because you
+          see the word <strong><em>tuna</em></strong> at the bottom right
+          corner!
+        </p>
+
+        <p>Lucky you!</p>
+
+        <p>
+          This is how logarithmic time works. It does not go through all of the
+          data and only goes through the data that is relevant.
+        </p>
+
+        <p>
+          This is great because it will remain relatively fast even if we have a
+          lot of data. Constant time and Logarithmic time are a programmer's
+          best friends.
+        </p>
+
+        <h3>O(n^2) Quadratic Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://i0.wp.com/www.jenniferbland.com/wp-content/uploads/On2-quadratic-time-complexity.jpg?resize=382%2C322"
+            alt=""
+          />
+          <figcaption>An illustration of quadratic time.</figcaption>
+        </figure>
+        <p>
+          Quadratic time is described by the expression: O(n^2). It describes
+          the time it takes to complete the execution of our data as being done
+          in a quadratic way.
+        </p>
+
+        <p><em>Okay, but what does that mean?</em></p>
+
+        <p>Think back to math class where we learned about squared numbers.</p>
+
+        <p>
+          A squared number is the value we get when we take an integer and
+          multiply it by itself.
+        </p>
+
+        <p>For example, 3 * 3 = 9. Or, 5 * 5 = 25. So on and so forth.</p>
+
+        <p>Take this same concept and apply it to programming.</p>
+
+        <p>
+          We have a multidimensional array full of strings. So, for each
+          position at <strong><em>i</em></strong> we go over it
+          <strong><em>j</em></strong> times.
+        </p>
+
+        <p>
+          Furthermore, through this process the time it takes for our code to
+          complete depends upon the formula i * j = totalTimeNeeded.
+        </p>
+
+        <p>
+          Quadratic time should be avoided if possible, since the time needed to
+          go through our large data can add up quickly.
+        </p>
+
+        <p>
+          However, also keep in mind that at times we also have no other choice,
+          but to use two for loops to traverse the data.
+        </p>
+
+        <h3>O(2^n) Exponential Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://victoria.dev/blog/a-coffee-break-introduction-to-time-complexity-of-algorithms/graph%282n%29.png"
+            alt=""
+          />
+          <figcaption>
+            An illustration of exponential time. It as an even steeper time
+            growth rate.
+          </figcaption>
+        </figure>
+        <p>
+          Exponential time is described using the expression: O(2^n).
+        </p>
+
+        <p>
+          When we write our code in an exponential way, what this means is that
+          the time it will take for our method to go through our data will
+          double with each addition to the data.
+        </p>
+
+        <p>
+          This is not ideal, and programmers should strive to avoid if possible,
+          writing any code that will go through our data in this way.
+        </p>
+
+        <p>It will slow down our website or app tremendously.</p>
+
+        <h3>O(n!) Factorial Time</h3>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT5QcyGJfqGHFGSU_IKMcXe0-riQVw07XRo4A&usqp=CAU"
+            alt=""
+          />
+          <figcaption>Avoid this at all costs.</figcaption>
+        </figure>
+        <p>
+          Factorial time is conveyed to us by the expression: O(n!).
+        </p>
+
+        <p>
+          What the n! means in O(n!), is that the amount of time it takes for us
+          to go through all of our data depends upon the factorial of the length
+          of our data.
+        </p>
+
+        <p><em>Alright, but what is a factorial?</em></p>
+
+        <p>
+          A factorial is the value of the product/multiplication of each integer
+          from the number 1, to the number we have in mind.
+        </p>
+
+        <p>Here are some examples:</p>
+
+        <p>
+          The factorial of 3 is: 1 * 2 * 3. Which is equal to 6. Why? Because 1
+          * 2 = 2. And we take that 2 and then multiply it by 3 which is 6.
+        </p>
+
+        <p>So what's the factorial of 5?</p>
+
+        <p>Well its: 1 * 2 * 3 * 4 * 5, which is equal to 120.</p>
+
+        <p>
+          And as you can see, the gap, or rather jump, from 6 to 120 if very
+          large. Which is exactly why all programmers want to avoid coding in a
+          factorial way, if possible.
+        </p>
+
+        <p>It will quickly slow down any website and app.</p>
+
+        <h2>Closing Comments</h2>
+        <p>
+          I hope this helped you out! This was more of a conceptual explanation
+          of how Big O Notation works. I was thinking of adding some code to
+          demonstrate these concepts, but the article was already getting pretty
+          long to read.
+        </p>
+
+        <p>
+          So, keep an eye out for my next article where I go over these concepts
+          again, but with code to help illustrate Big O Notation.
+        </p>
+      </article>
+    </main>
+
+    <script defer src="../../js/navMenuMobile.js"></script>
+
+    <footer class="footer">
+      <p>© Copyright 2019 - 2020 Sergio Gutierrez. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

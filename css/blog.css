@@ -1,0 +1,64 @@
+html,
+body {
+  -ms-overflow-style: unset; /* IE and Edge */
+  scroll-behavior: smooth !important;
+  scrollbar-color: #a27035 #f3f1ec;
+  scrollbar-width: thin; /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: unset;
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+}
+
+.blog-post {
+  background: #fff;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
+
+.blog-post h2 {
+  text-align: center;
+}
+
+.blog-post p {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.blog-post__img {
+  height: auto;
+  width: 500px;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.fa-mouse {
+  margin-left: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .blog-post {
+    padding: 2rem;
+    margin: 5rem auto;
+    width: 60%;
+  }
+
+  .btn__blog {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-post {
+    padding: 1rem;
+    margin: 2rem auto;
+    width: 100%;
+  }
+}

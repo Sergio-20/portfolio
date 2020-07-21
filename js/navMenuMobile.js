@@ -3,6 +3,7 @@ let openNav = document.querySelector( ".open-nav" );
 
 if ( window.matchMedia( '( max-device-width: 760px )' ).matches ) {
 
+    let header = document.querySelector(".header");
     let headerItems = document.querySelectorAll( ".header__item" );
     
     document.addEventListener( "DOMContentLoaded", () => { 
@@ -15,6 +16,7 @@ if ( window.matchMedia( '( max-device-width: 760px )' ).matches ) {
     }, false);
     
     openNav.addEventListener( "click", () => {
+      header.style.height = "500px";
       headerItems.forEach( item => {
         item.classList.remove( "hide" );
         item.classList.add( "show" );
@@ -24,6 +26,7 @@ if ( window.matchMedia( '( max-device-width: 760px )' ).matches ) {
     }, false);
     
     closeNav.addEventListener( "click", () => {
+      header.style.height = "revert";
       headerItems.forEach( item => {
         item.classList.remove( "show" );
         item.classList.add( "hide" );

@@ -6,21 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/scroll.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
   <title>Sergio Gutierrez | Web Developer from Fresno, CA</title>
 </head>
 
-<body>
+<body class="example">
 
 <header class="header">
   <nav>
 	<ul>
 	<i class="header__item fa fa-bars open-nav" aria-hidden="true"></i>
 	<i class="header__item fa fa-times close-nav" aria-hidden="true"></i>
-	<li class="header__item"><a href="#"><img src="./img/valley-web-logo.png" height="80" alt="Valley Web LLC. Logo" /></a></li>
-	<li class="header__item"><a href="#">Home</a></li>
+	<li class="header__item"><a href="/"><img src="./img/valley-web-logo.png" height="80" alt="Valley Web LLC. Logo" /></a></li>
+	<li class="header__item"><a href="/">Home</a></li>
 	<li class="header__item"><a href="#about-me">About Me</a></li>	
 	<li class="header__item"><a href="#websites">Portfolio</a></li>
+	<li class="header__item"><a href="/blog/blog.html">Blog</a></li>
 	<li class="header__item"><a href="#contact">Contact</a></li>		
 	</ul>  
   </nav>	
@@ -28,19 +30,82 @@
 
 <main>
 
-  <div style="background-image: url( './img/valley-web-bkg.png' ); background-repeat: no-repeat; position: relative; min-height: 60vh;"></div>	
+  <div id="banner" class="parallax"></div>	
 
   <div id="about-me" class="section-container padding-b">
     <section class="section__large">
 	  <h1>Hi, I'm Sergio. I help businesses develop an effective online presence.</h1>	  
-	  <p class="large-font">Web Developer & Owner of Valley Web LLC.</p>
+	  <p class="large-font">Web Developer From Fresno,CA</p>
 	</section>
 	<section class="section__small">
 	  <img class="section__image selfie" src="./img/selfie.png" alt="A picture of myself, Sergio Gutierrez." />	
 	</section>	  
   </div>
 
-  <div id="websites" class="bg-white padding-tb">
+
+  <!-- Parallax View of Projects -->
+  <div id="ma" class="darken parallax">
+	<div class="parallax-text">
+		<h2>Microautomation</h2>
+		<p>I along with Jonathan Sumner of <a href="https://www.khaoticdigital.com/" target="_blank">Khaotic Digital</a> 
+			helped to migrate Microautomation from Hubspot over to WordPress. The code was written in a modular way.</p>
+		<a class="btn btn__default" href="https://microautomation.com/" target="_blank">View Online</a>
+	</div>
+  </div>
+
+  <div id="ss" class="darken parallax">
+	<div class="parallax-text">
+		<h2>ScorePAD Sports Inc.</h2>
+		<p>I helped ScorePAD Sports Inc. redesign their website. Their mockup for the new website was 
+			followed closely and made a reality.
+		</p>
+		<a class="btn btn__default" href="#">View Online</a>
+	</div>
+  </div>
+
+  <div id="mg" class="darken parallax">
+	<div class="parallax-text">
+		<h2>Marketing Genome</h2>
+		<p>Marketing Genome needed their website to be migrated over from 
+			Hubspot to WordPress. I along with Jonathan Sumner of 
+			<a href="https://www.khaoticdigital.com/" target="_blank">Khaotic Digital</a>, 
+			helped with the migration.
+		</p>
+		<a class="btn btn__default" href="https://marketinggenome.com/" target="_blank">View Online</a>
+	</div>
+  </div>
+
+  <div id="smb" class="darken parallax">
+	<div class="parallax-text">
+		<h2>SmartMed Billing Solutions</h2>
+		<p>I installed a WordPress theme for SmartMed Billing Solutions.</p>
+		<a class="btn btn__default" href="https://smbillings.com/" target="_blank">View Online</a>
+	</div>
+  </div>
+
+  <div id="photo-theme" class="darken parallax">
+	<div class="parallax-text">
+		<h2>Photography Theme</h2>
+		<p>This is a pure HTML and CSS theme with some Javascript. It demonstrates my front-end development skills.</p>
+		<a class="btn btn__default" href="https://sergio-20.github.io/photography-theme/" target="_blank">View Online</a>
+		<a class="btn btn__default" href="https://github.com/Sergio-20/photography-theme" target="_blank">View Code</a>
+	</div>
+  </div>
+
+  <div id="exp-tri" class="darken parallax">
+	<div class="parallax-text">
+		<h2>Experience Triathlon</h2>
+		<p>I helped Tara Gearhart of <a href="https://www.tmediaconsulting.com/about-us" target="_blank">T Media Consulting</a>
+		   with redesigning some webpages and CTAs for one of her clients, Experience Triathlon.
+		</p>
+		<a class="btn btn__default" href="https://experiencetriathlon.com/" target="_blank">View Online</a>
+	</div>
+  </div>
+
+
+
+  <!-- My Portfolio Section -->
+  <div id="websites" class="bg-white padding-b padding-t">
 
 	<!-- Row 1 -->
 	<div class="bg-white section__image-zoom-container">
@@ -86,7 +151,51 @@
 	  </section>
   </div>
 
-  <div id="contact" class="section-container padding-b" style="background: linear-gradient(to top, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.2)), url('./img/IMG_5816.JPG') center center; background-size: cover;">
+  <div id="apps" class="bg-white padding-b padding-t">
+
+	<div class="bg-white section__image-zoom-container">
+	  <h2 class="text-center">Apps</h2>
+	  <hr class="heading--underline" />
+	</div>
+	 
+	<section class="section section__image-zoom-container">
+	  <figure>
+		<a href="https://github.com/Sergio-20/ifit-FED-challenge" target="_blank"><img class="section__image section__image--zoom" 
+			src="https://user-images.githubusercontent.com/29030325/83676379-6c0e3c00-a58f-11ea-9c7a-b29b23949d11.png" alt="" />
+		</a>
+		<figcaption class="text-center">ifit FED challenge</figcaption>  
+	  </figure>	
+	</section>
+
+	<section class="section section__image-zoom-container">
+	  <figure>
+		<a href="https://github.com/Sergio-20/jpop-radio" target="_blank"><img class="section__image section__image--zoom" 
+			src="https://github.com/Sergio-20/jpop-radio/raw/master/assets/images/pc-01.png" alt="" />
+		</a>  
+	  </figure>	
+	  <figcaption class="text-center">J-pop Radio</figcaption>
+	</section>
+
+	<section class="section section__image-zoom-container">
+	  <figure>
+		<a href="https://github.com/Sergio-20/pay-your-bills" target="_blank"><img class="section__image section__image--zoom" 
+			src="https://user-images.githubusercontent.com/29030325/58362713-1452d600-7e4f-11e9-991c-b410570e91d2.png" alt="" /></a>  
+	  </figure>	
+	  <figcaption class="text-center">Pay Your Bills App</figcaption>
+	</section>
+
+	<section class="section section__image-zoom-container">
+	  <figure>
+		<a href="https://github.com/Sergio-20/terminal-game" target="_blank">
+			<img class="section__image section__image--zoom" src="./img/slay-the-dragon-save-your-village.PNG" alt="" />
+		</a>  
+	  </figure>	
+	  <figcaption class="text-center">Slay the Dragon, Save your village!</figcaption>
+	</section>
+
+  </div>
+
+  <div id="contact" class="section-container padding-b padding-t">
     <section class="section__large">
 	  <h2>A little bit about me</h2>	  
 	  <p>Turning a website design into code is very fulfilling. It allows me to help businesses develop an <span class="bold">effective online presence</span>. Additionally, 

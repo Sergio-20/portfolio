@@ -1,0 +1,94 @@
+#banner {
+  background-image: url( '../img/valley-web-bkg.png' ); 
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: auto;
+  position: relative; 
+  min-height: 60vh;
+}
+
+#exp-tri {
+  background-image: url("../img/experience-triathlon.png");
+}
+
+#ma {
+  background-image: url("../img/microautomation.png");
+  transition: all 0.5s ease-in-out;
+}
+
+.parallax-text {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-direction: column; 
+  padding: 5rem;
+}
+
+.parallax-text * {
+  color: white;
+}
+
+.parallax-text p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+#mg {
+  background-image: url("../img/marketing-genome.png");
+}
+
+#photo-theme {
+  background-image: url("../img/photography-website.jpg");
+}
+
+#smb {
+  background-image: url("../img/smartmed-billing-solutions.png");
+}
+
+#ss {
+  background-image: url("../img/scorepad-sports-inc.png");
+}
+
+.darken {
+  box-shadow: inset 0 0 0 100vw rgba(0,0,0,0.7);
+}
+
+.parallax {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px)
+{
+  .parallax {
+    min-height: 650px;
+  }
+
+  .parallax-text {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px)
+{
+
+  #banner {
+    display: none;
+  }
+
+  .parallax {
+    background-position: center;
+    min-height: 250px;
+    padding: 2rem;
+  }
+
+  .parallax-text {
+    padding: unset;
+    width: 100%;
+  }
+}
