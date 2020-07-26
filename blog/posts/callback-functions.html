@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <title>Sergio Gutierrez | What is a callback function?</title>
+  </head>
+
+  <body class="example">
+    <header class="header">
+      <nav>
+        <ul>
+          <i class="header__item fa fa-bars open-nav" aria-hidden="true"></i>
+          <i class="header__item fa fa-times close-nav" aria-hidden="true"></i>
+          <li class="header__item">
+            <a href="/"
+              ><img
+                src="../../img/valley-web-logo.png"
+                height="80"
+                alt="Valley Web LLC. Logo"
+            /></a>
+          </li>
+          <li class="header__item"><a href="/">Home</a></li>
+          <li class="header__item"><a href="/#about-me">About Me</a></li>
+          <li class="header__item"><a href="/#websites">Portfolio</a></li>
+          <li class="header__item"><a href="/blog/blog.html">Blog</a></li>
+          <li class="header__item"><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article class="blog-post text-center">
+        <h1>What is a callback function?</h1>
+        <figure>
+          <img
+            class="blog-post__img"
+            src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt=""
+          />
+          <figcaption></figcaption>
+        </figure>
+        <p>
+          A callback function is a function that is within another function. It
+          gets executed at some later time, but not immediately (unlike how
+          Javascript code is normally executed).
+        </p>
+        <p>
+          The time at which it gets executed is either said specifically by the
+          programmer, or is determined by interferences such as internet speed,
+          large data processing, resource fetching, etc.
+        </p>
+        <h2>Asynchronous Programming</h2>
+        <p>That's great and all, but who cares? When and why should I use them?</p>
+        <p>
+          What makes callback functions a staple of traditional Javascript programming 
+          is that they are a built-in feature of the language. Code execution does not 
+          stop and wait for the current function to finish its tasks before the program 
+          then calls the next code down the script of the program.
+        </p>
+        <p>
+          Instead, functions and code which are not a callback function will continue 
+          to get executed. Once that is finished (the stack clears), then the callback 
+          functions will execute in the order they were first encountered.
+        </p>
+        <p>And that my friends, is what is known by the name of Asynchronous Programming.</p>
+        <p>
+          You should care since callback functions can potentially speed up your website or 
+          application, because code execution does not stop and wait to finish its current 
+          process before moving on.
+        </p>
+        <p>
+          You should use callback functions whenever you need to get a resource (like images, text, audio), 
+          or process some data, but where you also do not want your program to stop and wait for the entire
+          process to complete. After all, you don't want to make the end user, a visitor to your website or app,
+          to have to wait too long otherwise they will get bored and leave.
+        </p>
+        <h3>Examples</h2>
+        <p><em>That cool and everything, but let me <strong>see some code!</strong></em></p>
+        <p><em>Sounds good. Let me walk you through a couple of examples:</em></p>
+        
+        <h4>Example 1</h4>
+        <figure>
+          <img src="../../img/code-samples/callback-functions/example_01.PNG" alt="The set timeout function with a callback function within it." />
+          <figcaption>setTimeout() with a callback function.</figcaption>
+        </figure>
+        <p>In this first example, the console.log() function is declared first and executes first. Just as we'd expect it to.</p>
+        <p>
+          However, an interesting thing happens...our code within the setTimeout() function executes 
+          <em><strong>after</strong></em> our final console.log(), which prints out to the console: "This executes second!"
+        </p>
+        <p>
+          Remember, the code that is not a callback function is not asynchronous, 
+          which means that code will execute immediately and will <em><strong>not</strong></em> be put
+          on the backburner; unlike our callback functions.
+        </p>
+        <p>This is why our code within the setTimeout function executes last in this example.</p>
+        <p>
+          So, the execution order is: the first console.log() >>> 
+          the last console.log() at the end of our script >>> and then our console.log()
+          found within the setTimeout function.
+        </p>
+
+        <h4>Example 2</h4>
+        <figure>
+          <img src="../../img/code-samples/callback-functions/example_02.PNG" alt="An event listener, which has a callback function within it." />
+          <figcaption>A callback function within the click event listener.</figcaption>
+        </figure>
+        <p>Our second example proceeds like so:</p>
+        <p>The myBtn event listener get's put into the heap, where it waits to get called upon mouse click.</p>
+        <p>This happens first.</p>
+        <p>What happens next is our console.log() at the end of the script gets called and prints its message to the console.</p>
+        <p>
+          Lastly, our user finally clicks the button and console.log() prints, 
+          "I execute after the console.log() outside the event listener!"
+        </p>
+
+        <h2>Summary</h2>
+        <p>
+          Ultimately, callback functions help us keep our code running 
+          efficiently by not having our code stop and wait for the current 
+          function execution to finish.
+        </p>
+        <p>
+          <a href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch2.md" 
+          target="_blank">Check out this awesome chapter</a> from <em>You don't know JS</em> for a more
+          in-depth explanation.
+        </p>
+        <p>This is crazy cool...<a href="./promises-explained.html">but what if I promised you a better way?</a></p>
+      </article>
+    </main>
+
+    <script defer src="../../js/navMenuMobile.js"></script>
+
+    <footer class="footer">
+      <p>© Copyright 2019 - 2020 Sergio Gutierrez. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
