@@ -42,19 +42,142 @@
         <figure>
           <img
             class="blog-post__img"
-            src=""
-            alt=""
+            src="https://images.pexels.com/photos/2058130/pexels-photo-2058130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Two men shaking hands"
+            title="Two men shaking hands"
           />
-          <figcaption></figcaption>
+          <figcaption>
+            A handshake, the classic symbol of trust...or shall we say...a
+            promise?
+          </figcaption>
         </figure>
-        <p></p>
+        <p>
+          Much like how callback functions are used to write code that executes
+          in the background, while other code executes in the foreground,
+          promises also accomplishes this.
+        </p>
+        <p>
+          Promises were designed and developed in order to address the issues
+          with callback functions when writing asynchronous code. Which, we will
+          explore below.
+        </p>
+        <h2>Issues with Callbacks</h2>
+        <p>
+          While callbacks are great, and are still widely used today, they have
+          many issues. These issues can be summarized in that they are too
+          <u>unpredictable</u> and <u>error-laden</u>.
+        </p>
+        <p>
+          Many programmers become frustrated with callbacks due to how
+          unpredictable the timing is. Sometimes the code is called too late,
+          other times too early. Sometimes a customers credit card is charged
+          once, other times more than once (uh oh!). Other times not at all
+          (why!?).
+        </p>
+        <p>
+          To add to the programmer's woes, the
+          <a
+            href="https://duckduckgo.com/?q=callback+hell&iax=images&ia=images"
+            target="_blank"
+            >triangle of doom (aka callback hell)</a
+          >
+          will only further your anxiety when dealing with unmaintained code. It
+          will be full of errors, and/or extremely hard to make any sense of it.
+          This will in turn, cause you and your team to spend more time than
+          needed on correcting any problems.
+        </p>
+        <p>
+          How then, can these issues be resolved, or at the very least be
+          minimized?
+        </p>
+        <h2>Promises to the Rescue</h2>
+        <p>
+          All of those issues we previously mentioned about callbacks being
+          unpredictable and buggy are solved by Promises.
+        </p>
+        <p>
+          Promises are a way for us to write our code in a way that is easier to
+          read, and can still be read top-to-bottom without our eyes jumping up
+          and down the page due to callback functions's triangle of
+          doom/callback hell.
+        </p>
+        <h3>An example of Promise Use</h3>
+        <figure>
+          <img
+            src="../../img/code-samples/promises/example_01.PNG"
+            alt="Code demonstrating the use of Promises."
+          />
+          <figcaption>Javascript Promises in action</figcaption>
+        </figure>
+        <p>
+          As you can see in the image above, they are read from top-to-bottom.
+          Which is great for our eyes, and it also makes our code easier to
+          understand.
+        </p>
+        <h4>How to use</h4>
+        <ol>
+          <li>
+            <p>
+              First, as we see in the image above, first we create our Promise
+              using the "new Promise" syntax since Promises are objects.
+            </p>
+            <p>
+              Then, we type in our logic for what we want to happen if what we
+              want to happen succeeds or fails.
+            </p>
+          </li>
+          <li>
+            <p>
+              Second, the result of that success or failure in step one, is then
+              taken care of by our logic in the "then()" function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Third, we take care of any errors that occur with the "catch()"
+              function.
+            </p>
+          </li>
+          <li>
+            <p>
+              Fourth, is the optional step. We can then use the "finally()"
+              function to ensure that whatever is within it, will always
+              execute. It doesn't matter if there was an error or not, this code
+              snippet will always execute at the end of our script.
+            </p>
+          </li>
+        </ol>
+        <h2>Summary</h2>
+        <p>
+          As fascinating as promises are, they are well worth investing more of
+          your time in order to further comprehend them. They are fantastic for
+          writing asynchronous code, which is why they are used so much in
+          <a href="https://nodejs.org/en/" target="_blank">Node.js</a>.
+        </p>
+        <p>
+          They solve the unpredictable nature, and buggy mess that is callback
+          function use.
+        </p>
+        <h3>Helpful Links</h3>
+        <a
+          class="block"
+          href="https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch3.md"
+          target="_blank"
+          >In-depth Study of Promises</a
+        >
+        <a
+          class="block"
+          href="https://www.youtube.com/watch?v=IGYxfTTpoFg"
+          target="_blank"
+          >A great video to reinforce how to use Javascript Promises</a
+        >
       </article>
     </main>
 
     <script defer src="../../js/navMenuMobile.js"></script>
 
     <footer class="footer">
-      <p>© Copyright 2019 - 2020 Sergio Gutierrez. All rights reserved.</p>
+      <p></p>
     </footer>
   </body>
 </html>

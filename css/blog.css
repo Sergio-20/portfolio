@@ -16,6 +16,10 @@ body::-webkit-scrollbar {
   -webkit-border-radius: 1rem;
 }
 
+.block {
+  display: block;
+}
+
 .blog-post {
   background: #fff;
   border-radius: 1rem;

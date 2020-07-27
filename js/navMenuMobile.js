@@ -1,3 +1,4 @@
+//Mobile menu
 let closeNav = document.querySelector( ".close-nav" );
 let openNav = document.querySelector( ".open-nav" );
 
@@ -38,3 +39,8 @@ if ( window.matchMedia( '( max-device-width: 760px )' ).matches ) {
   closeNav.classList.add( "hide" );  
   openNav.classList.add( "hide" );
 }
+
+
+//Update the current year on the footer copyright
+const footerYear = document.querySelector(".footer p:first-of-type");
+footerYear.innerHTML = `© Copyright 2019 - ${new Date().getFullYear()} Sergio Gutierrez. All rights reserved.`;
