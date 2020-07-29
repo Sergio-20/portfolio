@@ -40,10 +40,312 @@
       <article class="blog-post text-center">
         <h1>Hey, hey, hey. It's an API!</h1>
         <figure>
-          <img class="blog-post__img" src="" alt="" />
-          <figcaption></figcaption>
+          <img
+            class="blog-post__img"
+            src="https://images.unsplash.com/photo-1543365095-3892d8135a3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"
+            alt="A man driving that works for Alphabet (Google), drives a car and takes imagery for Google Maps."
+            title="Now, that's pretty cool!"
+          />
+          <figcaption>
+            We have found one of the agents...he's a Googler.
+          </figcaption>
         </figure>
-        <p></p>
+        <h2>What the heck is an API?</h2>
+        <p>
+          APIs stand for, "Application Programming Interfaces". But really, what
+          you need to know is that these API things hold lots of useful data for
+          developers to use for their cool app idea, or for a website that
+          allows people to obtain data about
+          <a href="https://api.nasa.gov/index.html" target="_blank"
+            >Mars Missions,</a
+          >
+          <a
+            href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1"
+            target="_blank"
+            >searching the iTunes store,</a
+          >
+          <a href="https://github.com/n0shake/Public-APIs" target="_blank"
+            >and a whole lot more.</a
+          >
+        </p>
+        <h2>What I Will Show You</h2>
+        <p>
+          The entire purpose of this blog post is that hopefully it can be
+          useful for other developers who are fairly new.
+        </p>
+        <p>
+          There are lots of useful tutorials teaching you how to do fetch "GET"
+          and "POST" requests out there. <em><strong>BUT</strong></em
+          >, I have been unable to find one tutorial at the time of this writing
+          dealing with fetch requests via nesting, and passing along
+          <a href="https://jwt.io/" target="_blank"
+            >JSON Web Token (JWT) authoriation.</a
+          >
+        </p>
+        <p>
+          And that is what we will be learning; while we use the
+          <a href="https://docs.listen.moe/" target="_blank">Listen.moe API.</a>
+          We will use this API to login to our respective account, and get song
+          data.
+        </p>
+
+        <h3>Create a Listen.moe Account</h3>
+        <p>
+          Alright, so first up, go ahead and create a
+          <a href="https://listen.moe/" target="_blank">Listen.moe account</a>
+          so that you can login to the API and get your JWT.
+        </p>
+
+        <h3 id="our-variables">Our Variables</h3>
+        <pre>
+          <code>
+            const log = console.log;
+  
+            const credentials = {
+              username: "myUsername",
+              password: "myPassword"
+            };
+  
+            var customHeaders = {
+              "Content-Type": "application/json",
+              Accept: "application/vnd.listen.v4+json"
+            };
+  
+            var myToken = "";
+          </code>
+        </pre>
+        <p>
+          Above we have our variables where console.log will be called instead
+          via "log()".
+        </p>
+        <p>
+          We also have our username and password saved in a constant named,
+          "credentials".
+        </p>
+        <p>
+          As for the, "customHeaders" variable name, it is where we include the
+          <em>type ("Content-Type":)</em> of content the server will respond
+          with, and what type of content our web browser is expecting to
+          <em>accept ("Accept":)</em>.
+        </p>
+
+        <p>
+          The <em>myToken</em> variable is a global variable, available
+          throughout our script, that will be assigned an empty value for now.
+          Later on it will then be reassigned the token value sent to us by the
+          web server.
+        </p>
+
+        <h3>Our fetch Request</h3>
+        <pre>
+          <code>
+            //Login to Listen.moe
+            fetch("https://listen.moe/api/login", {
+              method: "POST",
+              headers: customHeaders,
+              body: JSON.stringify(credentials);
+            })
+
+            .then(response => {
+              return response.json();
+            })
+
+            .then(result => {
+              log(result);
+            })
+
+            .catch(error => {
+              log(`ERROR: ${error}`);
+            });
+          </code>
+        </pre>
+
+        <p>
+          We pass in our endpoint url that we will be logging into. It is
+          designated a "POST" request, that has our "customHeaders" that we
+          defined earlier.
+        </p>
+        <p>
+          Moreover, we are passing into the body our account credentials and
+          turning that JSON object into a string.
+        </p>
+        <p>
+          From there, we obtain the response from the server and return it as
+          JSON data via the, "response.json()" method.
+        </p>
+        <p>
+          Now with our data parsed as JSON, we log it out to our console where
+          we will be greeted with our JWT.
+        </p>
+
+        <h3>JSON Web Token from the Server</h3>
+        <pre>
+          <code>
+            .then(result => {
+
+              log(result);
+
+              sessionStorage.setItem("myToken", JSON.stringify(result.token));
+
+              myToken = JSON.parse(sessionStorage.getItem("myToken"));
+
+              customHeaders.Authorization = `Bearer ${myToken}`;
+
+            });
+          </code>
+        </pre>
+
+        <p>We were able to login successfully!</p>
+
+        <p>
+          Continuing from the point where we logged out our assigned token, we
+          then save it locally via sessionStorage. Furthermore, we give it the
+          key of "myToken".
+        </p>
+        <p>
+          Afterwards, we assign our myToken <em>variable (not key)</em> from the
+          <a href="#our-variables">Our Variables Section</a> that we created;
+          the value of that sessionStorage value, but as JSON data.
+        </p>
+
+        <p>
+          Lastly, we then create an "Authorization" property on our
+          "customHeaders" object. We do this since the API requires us to pass
+          our JWT via the "Authorization" header.
+        </p>
+
+        <p>
+          Therefore, we do so and we follow the syntax, "Bearer ourAPIKey". But,
+          we use template literals instead of string concatenation purely out of
+          preference.
+        </p>
+
+        <h3>Nesting fetch Requests</h3>
+        <pre>
+          <code>
+            .then((result) => {
+
+              log(result);
+
+              sessionStorage.setItem("myToken", JSON.stringify(result.token));
+
+              myToken = JSON.parse(sessionStorage.getItem("myToken"));
+
+              customHeaders.Authorization = `Bearer ${myToken}`;
+
+              return fetch("https://listen.moe/api/songs", {
+                method: "GET",
+                headers: customHeaders,
+              })
+              
+              .then((response) => {
+                return response.json();
+              })
+              
+              .then((result) => {
+                log(result);
+              })
+              
+              .catch((error) => {
+                log(error);
+              });
+
+          })
+          </code>
+        </pre>
+
+        <p>
+          The final step is then to return a nested fetch statement where we GET
+          a song list, and then log out that song list.
+        </p>
+
+        <p>
+          All we must do is follow the Fetch API pattern we have been using, but
+          within the "result" .then() promise.
+        </p>
+
+        <p>
+          Take note of how the response, result, and error promises follow
+          <em>after</em> and are <em>within</em> the same "result" .then()
+          promise that the returning fetch statement is within.
+        </p>
+
+        <p>Congrats!</p>
+
+        <p>
+          You have just learned how to nest Fetch API calls, authorize yourself
+          via JWT in the "Authorization" header, set header and body properties,
+          how to specify GET and POST requests, and how to stringify and parse
+          JSON data!
+        </p>
+
+        <p>You've certainly leveled up!</p>
+
+        <h2>What Our Code Looks Like</h2>
+        <pre>
+          <code>
+            //Login to Listen.moe
+            fetch("https://listen.moe/api/login", {
+              method: "POST",
+              headers: customHeaders,
+              body: JSON.stringify(credentials);
+            })
+            .then(response => {
+              return response.json();
+            })
+            .then(result => {
+              log(result);
+              sessionStorage.setItem("myToken", JSON.stringify(result.token));
+              myToken = JSON.parse(sessionStorage.getItem("myToken"));
+              customHeaders.Authorization = `Bearer ${myToken}`;
+
+              //Get Listen.moe song data
+              return fetch("https://listen.moe/api/songs", {
+                method: "GET",
+                headers: customHeaders
+              })
+              .then(response => {
+                return response.json();
+              })
+              .then(result => {
+                log(result);
+              })
+              .catch(error => {
+                log(`ERROR: ${error}`);
+              })
+            })
+            .catch(error => {
+              log(`ERROR: ${error}`);
+            })
+          </code>
+        </pre>
+
+        <p>
+          This is what are code should look like now that you have finished
+          following this tutorial.
+        </p>
+
+        <p>If not, then go ahead and make the necessary adjustments.</p>
+
+        <h2>Summary</h2>
+        <p>
+          We have learned how to set request, header, and body properties, make
+          subsequent requests via nested fetch requests, and how to use JSON Web
+          Tokens.
+        </p>
+        <p>
+          You can also find
+          <a
+            href="https://github.com/Sergio-20/fetch-nesting/blob/master/fetch.js"
+            target="_blank"
+            >the code for this on my Github.</a
+          >
+          It will be there for any future reference.
+        </p>
+        <p>
+          Thank you for taking the time to read the article all the way to its
+          end! I hope you found this article useful and have a great day!
+        </p>
       </article>
     </main>
 

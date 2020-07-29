@@ -16,6 +16,13 @@ body::-webkit-scrollbar {
   -webkit-border-radius: 1rem;
 }
 
+pre {
+  background: #ccc;
+  background-color: #ccc;
+  font-size: 1em;
+  text-align: left;
+}
+
 .block {
   display: block;
 }
