@@ -40,10 +40,161 @@
       <article class="blog-post text-center">
         <h1>Generators. What are they?</h1>
         <figure>
-          <img class="blog-post__img" src="" alt="" />
-          <figcaption></figcaption>
+          <img
+            class="blog-post__img"
+            src="https://images.unsplash.com/photo-1585846328761-acbf5a12beea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+            alt="A man trying to explain what in the world a generator, as it relates to Javascript, is."
+            title="The man behind the generator"
+          />
+          <figcaption>
+            The man behind the generator. Ooohh....that's why async code
+            works...
+          </figcaption>
         </figure>
-        <p></p>
+
+        <h2>What is a generator?</h2>
+        <p>
+          Generators are declarative iterators that will be used more and more
+          as Javascript matures. Why? Because, the comity behind Ecmascript is
+          deciding to move more towards a declarative approach rather than an
+          imperative approach to programming in Javascript.
+        </p>
+
+        <p>
+          Okay, but what are those terms...iterators...declarative...imperative?
+        </p>
+
+        <p>
+          Consider an array that you loop over using forEach() or a standard for
+          loop, for instance.
+        </p>
+
+        <p>
+          Iterators are data structures that you loop over using for loops and
+          variations of for loops (e.g. the forEach() method).
+        </p>
+
+        <p>
+          Declarative, means a type of programming where you tell the computer,
+          "Do what I say, and you decide how it gets done".
+        </p>
+
+        <p>
+          Imperative, means a type of programming where you tell the computer,
+          "Do what I say, exactly as I tell you to".
+        </p>
+
+        <p>
+          What this essentially means is that Javascript is going to have a
+          larger library of code that programmers can use to make their lives
+          easier. <em><strong>But</strong></em
+          >, that ease of use will not have the same amount of power and freedom
+          that comes with the more imperative way to program that is a bit more
+          complex as well.
+        </p>
+
+        <h2>When Would I use generators?</h2>
+        <p>
+          You would use generators whenever you want to make your life easier by
+          making your code easier to read and understand, when you are going
+          over a data set like an array, set, map, or even objects ( they can be
+          iterated over with custom code ).
+        </p>
+        <p>
+          Generators would also be used whenever you want more control over the
+          flow of the iteration of your data. This is because with Generators,
+          you can pause and resume execution according to the conditions that
+          you specify.
+        </p>
+        <p>
+          Generators execute until they reach the yield keyword, and not
+          necessarily the end of the length of a string or array, for example.
+        </p>
+
+        <h2>Examples of Generator Use</h2>
+
+        <h3>Modular Generator Methods</h3>
+        <p>
+          Generators are recognized by the use of an asterisk next to either the
+          function keyword, or next to the name of the function.
+        </p>
+        <p>
+          My personal preference is to put the asterisk next to the name of the
+          function, because whenever I invoke the function it will be easy to
+          know if that function is a generator or not.
+        </p>
+        <pre>
+          <code>
+          function *numberIterator( start = 5, end = 25, step = 5 ) {
+            let iterations = 0;
+            for ( let i = start; i < end; i += step ) {
+              iterations++;
+              yield i;
+            }
+            return iterations;
+          }
+          </code>
+        </pre>
+        <p>
+          It's also a good idea to use destructuring for your parameters, so
+          that it can be modular to use. Setting defaults are also not a bad
+          idea, in regards to protecting yourself from logical errors (e.g.
+          undefined values).
+        </p>
+        <p>
+          The yield keyword is what makes a generator special. It is used here
+          to indicate that the execution will stop after iterations++ in this
+          example. This helps keep the code a bit simpler by for instance,
+          allowing you to declare <em>yield i</em>, instead of having an if
+          statement there.
+        </p>
+
+        <h3>Iterating over objects</h3>
+        <p>
+          Objects are not an iterable data structure, but that doesn't mean we
+          can't iterate over it. Which also means, we can use Generators to
+          iterate over objects.
+        </p>
+        <p>Here's an example:</p>
+        <pre>
+          <code>
+            var properties = {
+              name: "Sergio",
+              hairColor: "black",
+              eyeColor: "brown",
+              *[Symbol.iterator]() {
+                for( let i = 0; i < 30; i++) {
+                  yield i;
+                }
+              }
+            };
+
+            for( let person of properties ) {
+              console.log(person); //prints out [0, 1, 2, 3...29]
+            }
+          </code>
+        </pre>
+        <p>
+          What we are doing is creating a properties object, which has a name,
+          hairColor, eyeColor, and a Generator as a property (remember the
+          asterisk!).
+        </p>
+        <p>
+          Defining a generator within an object will then allow us to iterate
+          over it using for loops; which is pretty awesome!
+        </p>
+        <p>
+          Lastly, I decide to iterate over the object and log out its properties
+          with a for...of loop.
+        </p>
+
+        <h2>Summary</h2>
+        <p>
+          We learned that generators are a more declarative way to loop over our
+          data, that generators provide a way to control when to pause and
+          resume data iteration, and that Javascript is moving towards the
+          declarative programming paradigm instead of an imperative paradigm.
+        </p>
       </article>
     </main>
 
