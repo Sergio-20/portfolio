@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -107,8 +106,8 @@ section.visible {
 }
 
 #contact {
-  background: url("../img/delicate-arch-night-stars-landscape.jpg")
-    center center;
+  background: url("../img/delicate-arch-night-stars-landscape.jpg") center
+    center;
   background-size: cover;
   margin-top: 5rem;
 }
@@ -174,8 +173,6 @@ section.visible {
 
 .btn__primary {
   background-color: #fff;
-  box-shadow: 0 0.2rem 0.1rem rgba(51, 51, 51, 0.05),
-    0 0.4rem 0.8rem rgba(63, 42, 3, 0.3);
   color: #222;
   margin-top: 2.5rem;
 }
@@ -228,6 +225,7 @@ section.visible {
 
 .footer {
   background: #000;
+  border-top: 0.15rem solid #fff;
   color: #fff;
   display: flex;
   font-size: 1rem;
@@ -291,10 +289,14 @@ header ul {
 }
 
 .header__item a {
-  color: #222;
+  color: #fff;
   font-size: 1.4rem;
   font-weight: 400;
   text-decoration: none;
+}
+
+.header__item a:hover {
+  color: #1fe9ae !important;
 }
 
 .heading--underline {
@@ -481,6 +483,10 @@ header ul {
 
   .header {
     position: unset;
+  }
+
+  .header ul {
+    flex-flow: column;
   }
 
   .header__item {
