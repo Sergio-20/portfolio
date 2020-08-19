@@ -1,0 +1,32 @@
+.modal_flex {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.modal_none {
+  display: none;
+}
+
+.pm-header {
+  color: #222;
+}
+
+.project-modal {
+  background: #fff;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #222;
+  margin: 0 auto;
+  padding: 2rem 2rem 2rem 0rem;
+  width: 960px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-modal {
+    width: 330px;
+  }
+}

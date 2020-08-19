@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -86,8 +87,31 @@
             <li>PHP</li>
             <li>SQL</li>
             <li>Java</li>
+            <li>Visual Basic</li>
           </ul>
         </div>
+      </div>
+
+      <!-- Modular Project Modal -->
+      <div id="project-modal" class="project-modal modal_none">
+        <figure class="pm-figure">
+          <img class="pm-img" src="" alt="" />
+          <figcaption class="pm-figcap"></figcaption>
+        </figure>
+        <h2 class="pm-header"></h2>
+        <p class="pm-desc"></p>
+        <a
+          class="btn btn__default pm-github"
+          href="#"
+          rel="noopener nofollower"
+          target="_blank"
+        ></a>
+        <a
+          class="btn btn__default pm-view-project"
+          href="#"
+          rel="noopener nofollower"
+          target="_blank"
+        ></a>
       </div>
 
       <!-- My Portfolio Section -->
@@ -98,9 +122,12 @@
           <hr class="heading--underline" />
         </div>
 
-        <section class="section section__image-zoom-container">
+        <section
+          id="microautomation"
+          class="section section__image-zoom-container"
+        >
           <figure>
-            <a href="https://microautomation.com" target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="./img/microautomation.png"
@@ -110,9 +137,12 @@
         </section>
 
         <!-- Row 2 -->
-        <section class="section section__image-zoom-container">
+        <section
+          id="marketing-genome"
+          class="section section__image-zoom-container"
+        >
           <figure>
-            <a href="https://marketinggenome.com/" target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="./img/marketing-genome.png"
@@ -121,9 +151,9 @@
           </figure>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section id="smbillings" class="section section__image-zoom-container">
           <figure>
-            <a href="https://smbillings.com/" target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="./img/smartmed-billing-solutions.png"
@@ -132,11 +162,12 @@
           </figure>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section
+          id="photography-theme"
+          class="section section__image-zoom-container"
+        >
           <figure>
-            <a
-              href="https://sergio-20.github.io/photography-theme/"
-              target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="./img/photography-website.jpg"
@@ -145,11 +176,12 @@
           </figure>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section
+          id="experience-triathlon"
+          class="section section__image-zoom-container"
+        >
           <figure>
-            <a
-              href="https://experiencetriathlon.com/etu-experience-triathlon-university/"
-              target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="./img/experience-triathlon.png"
@@ -165,11 +197,13 @@
           <hr class="heading--underline" />
         </div>
 
-        <section class="section section__image-zoom-container">
+        <section
+          id="ifit-challenge"
+          class="section section__image-zoom-container"
+        >
           <figure>
             <a
-              href="https://github.com/Sergio-20/ifit-FED-challenge"
-              target="_blank"
+              href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="https://user-images.githubusercontent.com/29030325/83676379-6c0e3c00-a58f-11ea-9c7a-b29b23949d11.png"
@@ -180,9 +214,9 @@
           </figure>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section id="jpop-radio" class="section section__image-zoom-container">
           <figure>
-            <a href="https://github.com/Sergio-20/jpop-radio" target="_blank"
+            <a href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="https://github.com/Sergio-20/jpop-radio/raw/master/assets/images/pc-01.png"
@@ -193,11 +227,10 @@
           <figcaption class="text-center">J-pop Radio</figcaption>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section id="bills-app" class="section section__image-zoom-container">
           <figure>
             <a
-              href="https://github.com/Sergio-20/pay-your-bills"
-              target="_blank"
+              href="#project-modal"
               ><img
                 class="section__image section__image--zoom"
                 src="https://user-images.githubusercontent.com/29030325/58362713-1452d600-7e4f-11e9-991c-b410570e91d2.png"
@@ -207,11 +240,10 @@
           <figcaption class="text-center">Pay Your Bills App</figcaption>
         </section>
 
-        <section class="section section__image-zoom-container">
+        <section id="dragon-game" class="section section__image-zoom-container">
           <figure>
             <a
-              href="https://github.com/Sergio-20/terminal-game"
-              target="_blank"
+              href="#project-modal"
             >
               <img
                 class="section__image section__image--zoom"
@@ -258,6 +290,7 @@
         crossorigin="anonymous"
       ></script>
       <script defer src="./js/fadeInOut.js"></script>
+      <script src="./js/popup.js"></script>
     </main>
 
     <footer class="footer">

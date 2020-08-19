@@ -7,7 +7,7 @@
 }
 
 ::selection {
-  background: orangered;
+  background: red;
   color: white;
 }
 
@@ -286,6 +286,10 @@ header ul {
 
 .hide {
   display: none !important;
+}
+
+.img-fluid {
+  max-width: 100%;
 }
 
 .logo-container img {
